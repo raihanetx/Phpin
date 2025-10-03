@@ -1,0 +1,147 @@
+[
+    {
+        "name": "Entertainment Hub",
+        "slug": "entertainment-hub",
+        "icon": "fa-solid fa-film",
+        "products": [
+            {
+                "id": 101,
+                "name": "Cineverse Ultra",
+                "slug": "cineverse-ultra",
+                "description": "Stream on 4 screens at once in stunning 4K.Stream on 4 screens at once in stunning 4K.\r\n Stream on 4 screens at once in stunning 4K.\r\n#\r\n########\r\nS\r\nA\r\nA\r\n#####\r\nS\r\nA\r\nS\r\nS\r\nS\r\nSs\r\nS\r\nS\r\nSs\r\n\r\nS\r\nS\r\nS\r\nS\r\nSssss\r\nS\r\n\r\nSss\r\nSs\r\n\r\nS\r\nS\r\nS\r\nS\r\nS\r\nS\r\nS\r\nS\r\nS",
+                "long_description": "Get unlimited access to our vast library of movies, exclusive series, and mobile games with Cineverse Ultra. Watch on up to 4 supported devices at a time.\r\n\r\n**Features:**\r\n- Completely ad-free viewing\r\n- Download content on 6 devices\r\n- Immersive spatial audio included\r\nDbhdhdhdhdjdjrhrhjrjrhrht\r\nDbdhdhhdhdjdjr\r\nDjdhhdhdrjudjd\r\nDjdhfjhfhfjtjr\r\nDhdhfjjfjf",
+                "image": "uploads/product-1759020114-68d884522f0e7-Screenshot_2025-09-24-17-22-48-859_com.miui.securitycenter.jpg",
+                "pricing": [
+                    {
+                        "duration": "1 Month Plan",
+                        "price": 350
+                    },
+                    {
+                        "duration": "3 Month Plan",
+                        "price": 1000
+                    }
+                ],
+                "stock_out": false,
+                "featured": true,
+                "reviews": [
+                    {
+                        "id": "1715000001",
+                        "name": "Kamal Ahmed",
+                        "rating": 5,
+                        "comment": "Fast delivery and great price for the service. Highly recommended!"
+                    },
+                    {
+                        "id": "1715000002",
+                        "name": "Farah Hossain",
+                        "rating": 4,
+                        "comment": "Works perfectly. Activation took a few minutes but worth it."
+                    }
+                ]
+            },
+            {
+                "id": 102,
+                "name": "SoundWave Plus",
+                "slug": "soundwave-plus",
+                "description": "Ad-free music listening and offline playback.\r\nListen to your favorite music without ads and download tracks to listen anywhere with SoundWave Plus. Enjoy high-quality audio and unlimited skips.\r\n\r\n**Benefits:**\r\n- Listen offline\r\n- Play on any device\r\n-",
+                "long_description": "Listen to your favorite music without ads and download tracks to listen anywhere with SoundWave Plus. Enjoy high-quality audio and unlimited skips.\r\n\r\n**Benefits:**\r\n- Listen offline\r\n- Play on any device\r\n- No ad interruptions\r\n- Unlimited song skips\r\n\r\nListen to your favorite music without ads and download tracks to listen anywhere with SoundWave Plus. Enjoy high-quality audio and unlimited skips.\r\n\r\n**Benefits:**\r\n- Listen offline\r\n- Play on any device\r\n- No ad interruptions\r\n- Unlimited song skips",
+                "image": "uploads/product-1759020129-68d8846122259-Screenshot_2025-09-22-18-19-15-837_com.google.android.googlequicksearchbox.jpg",
+                "pricing": [
+                    {
+                        "duration": "1 Month Access",
+                        "price": 150
+                    },
+                    {
+                        "duration": "6 Month Access",
+                        "price": 850
+                    }
+                ],
+                "stock_out": false,
+                "featured": false,
+                "reviews": [
+                    {
+                        "id": "1758972918-372",
+                        "name": "Hi",
+                        "rating": 5,
+                        "comment": "Hallo "
+                    }
+                ]
+            },
+            {
+                "id": 103,
+                "name": "VidStream Premium",
+                "slug": "vidstream-premium",
+                "description": "Enjoy videos and music completely ad-free.",
+                "long_description": "Watch videos without ads, play them in the background while using other apps, and download for offline viewing. Also includes premium access to our music streaming service.",
+                "image": "uploads/product-1758965643-68d7af8be507a-gradient-1758956335892.png",
+                "pricing": [
+                    {
+                        "duration": "1 Month",
+                        "price": 200
+                    }
+                ],
+                "stock_out": true,
+                "featured": false,
+                "reviews": []
+            },
+            {
+                "id": "1759019035987",
+                "name": "Test product test title",
+                "slug": "test-product-test-title",
+                "description": "Testing product short description testing product short description testing products are description testing products or description testing.      \r\n production description testing pro. duction description disting production description",
+                "long_description": "NTesting product short description testing product short description testing products are description testing products or description testing.      \r\n production description testing pro. duction description disting production description\r\nNTesting product short description testing product short description testing products are description testing products or description testing.      \r\n production description testing pro. duction description disting production description\r\nN\r\nN\r\nN\r\n       \r\n          **  N**",
+                "image": "uploads/product-1759019035-68d8801b7eb18-gradient-1758956330738.png",
+                "pricing": [
+                    {
+                        "duration": "1month",
+                        "price": 336
+                    }
+                ],
+                "stock_out": false,
+                "featured": true,
+                "reviews": []
+            }
+        ]
+    },
+    {
+        "name": "fas fa-book",
+        "slug": "fas-fa-book",
+        "icon": "fas fa-book",
+        "products": []
+    },
+    {
+        "name": "Test1",
+        "slug": "test1",
+        "icon": "fas fa-book",
+        "products": []
+    },
+    {
+        "name": "Test2",
+        "slug": "test2",
+        "icon": "fas fa-book",
+        "products": []
+    },
+    {
+        "name": "Test3",
+        "slug": "test3",
+        "icon": "fas fa-book",
+        "products": []
+    },
+    {
+        "name": "Test4",
+        "slug": "test4",
+        "icon": "fas fa-book",
+        "products": []
+    },
+    {
+        "name": "Test5",
+        "slug": "test5",
+        "icon": "fas fa-book",
+        "products": []
+    },
+    {
+        "name": "Test6",
+        "slug": "test6",
+        "icon": "fas fa-book",
+        "products": []
+    }
+]
