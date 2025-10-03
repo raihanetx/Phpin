@@ -173,8 +173,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           CURLOPT_RETURNTRANSFER => true,
           CURLOPT_ENCODING => '',
           CURLOPT_MAXREDIRS => 10,
-          CURLOPT_CONNECTTIMEOUT => 20, // Increased connection timeout
-          CURLOPT_TIMEOUT => 40,      // Increased total timeout
+          CURLOPT_CONNECTTIMEOUT => 30, // Increased connection timeout to 30 seconds
+          CURLOPT_TIMEOUT => 60,      // Increased total timeout to 60 seconds
           CURLOPT_FOLLOWLOCATION => true,
           CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
           CURLOPT_CUSTOMREQUEST => 'POST',
