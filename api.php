@@ -158,10 +158,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'fullname' => $order_data['customerInfo']['name'],
             'email' => $order_data['customerInfo']['email'],
             'amount' => (string)$total, // Amount MUST be a string
+            'success_url' => $domain . $base_dir . '/payment_verify.php',
+            'cancel_url' => $domain . $base_dir . '/index.php',
+            'webhook_url' => '', // Add your webhook URL here if you have one in the future
             'metadata' => [
-                'success_url' => $domain . $base_dir . '/payment_verify.php',
-                'cancel_url' => $domain . $base_dir . '/index.php',
-                'webhook_url' => '', // Add your webhook URL here if you have one in the future
                 'internal_order_id' => (string)$new_order_id,
                 'customer_phone' => $order_data['customerInfo']['phone']
             ]
