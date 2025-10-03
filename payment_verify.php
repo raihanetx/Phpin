@@ -66,22 +66,36 @@ if (isset($verification_data['status']) && $verification_data['status'] === 'COM
     if ($internal_order_id) {
         $all_orders = get_data($orders_file_path);
         $order_updated = false;
+        $should_redirect_success = false;
 
         foreach ($all_orders as &$order) {
-            if ($order['order_id'] == $internal_order_id && $order['status'] === 'Awaiting Payment') {
-                $order['status'] = 'Pending'; // অ্যাডমিন কনফার্ম করার জন্য 'Pending'
-                $order['payment']['trx_id'] = $real_trx_id; // আসল TrxID সেভ করুন
-                $order['payment']['rupantor_tid'] = $rupantor_transaction_id; // রূপান্তরপে-এর ID ও সেভ করুন
-                $order_updated = true;
-                break;
+            if ($order['order_id'] == $internal_order_id) {
+                // If order is awaiting payment, update it. This is the first successful verification.
+                if ($order['status'] === 'Awaiting Payment') {
+                    $order['status'] = 'Pending'; // Set to Pending for admin confirmation
+                    $order['payment']['trx_id'] = $real_trx_id; // Save the real transaction ID
+                    $order['payment']['rupantor_tid'] = $rupantor_transaction_id; // Save RupantorPay's transaction ID
+                    $order_updated = true;
+                    $should_redirect_success = true;
+                    break;
+                }
+                // If order is already processed, this is a page refresh. Redirect to success without updating.
+                elseif (in_array($order['status'], ['Pending', 'Confirmed'])) {
+                    $should_redirect_success = true;
+                    break;
+                }
             }
         }
+        unset($order); // Unset reference
 
+        // Only save if we actually made a change
         if ($order_updated) {
             save_data($orders_file_path, $all_orders);
+        }
 
-            // সফল হওয়ার পর গ্রাহককে অর্ডার হিস্ট্রি পেজে পাঠান
-            // localStorage-এ অর্ডার আইডি যোগ করার জন্য একটি ছোট স্ক্রিপ্ট ব্যবহার করা হচ্ছে
+        // Redirect to success page if the order was found and was in a valid state
+        if ($should_redirect_success) {
+            // Redirect to order history page after saving the order ID in localStorage
             echo <<<HTML
             <!DOCTYPE html>
             <html>
@@ -98,7 +112,7 @@ if (isset($verification_data['status']) && $verification_data['status'] === 'COM
                     } catch (e) {
                         console.error("Could not save order ID to localStorage", e);
                     }
-                    // এখন অর্ডার হিস্ট্রি পেজে রিডাইরেক্ট করুন
+                    // Redirect to order history page
                     window.location.href = '{$base_url}/order-history'; 
                 </script>
             </head>
